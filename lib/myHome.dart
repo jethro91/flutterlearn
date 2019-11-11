@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _outputType = iniStringVar.runtimeType.toString();
       _outputValue = iniStringVar.toString();
     });
-    iniStringVar = 'String Balapan';
+    iniStringVar = 'String rubah myhome';
     setState(() {
       _outputType2 = iniStringVar.runtimeType.toString();
       _outputValue2 = iniStringVar.toString();
