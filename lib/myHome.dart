@@ -17,18 +17,35 @@ class _MyHomePageState extends State<MyHomePage> {
   String _outputValue2 = '';
   // ======================
 
-  var iniStringVar = 'Rubah Sesuatu';
+  String nama = 'Erihc';
+  int umur = 26;
+
+  // printNamaUmur(inputNama, inputUmur) =>
+  //     print('nama saya $inputNama umur $inputUmur');
+
+  String printNamaUmur(String inputNama, int inputUmur) {
+    return 'nama saya $inputNama umur $inputUmur';
+  }
+
+  String cekUsia(String inputNama, int inputUmur) {
+    if (inputUmur < 17) {
+      return "Belum Dewasa";
+    }
+    return "Sudah Dewasa";
+  }
 
   // ======================
   void _setoutputScreen() {
+    nama = 'Erihc';
+    umur = 15;
     setState(() {
-      _outputType = iniStringVar.runtimeType.toString();
-      _outputValue = iniStringVar.toString();
+      _outputType = nama.runtimeType.toString();
+      _outputValue = nama.toString();
     });
-    iniStringVar = 'String rubah myhome';
+    nama = cekUsia(nama, umur);
     setState(() {
-      _outputType2 = iniStringVar.runtimeType.toString();
-      _outputValue2 = iniStringVar.toString();
+      _outputType2 = nama.runtimeType.toString();
+      _outputValue2 = nama.toString();
     });
   }
 

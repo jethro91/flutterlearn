@@ -13,7 +13,7 @@ String namaUmur2(String nama, int umur) {
 }
 
 int ribuan({int angka}) {
-  return angka * 100;
+  return angka * 1000;
 }
 
 double sepuluhPersen({int angka}) {
@@ -34,6 +34,11 @@ dynamic sepuluhPersenDyn({dynamic angka}) {
 }
 
 // Fungsi dynamic(default)
+void printNamaUmurDefault({nama, umur}) {
+  print('Hi nama saya $nama umur $umur');
+  return;
+}
+
 namaUmurDefault({nama, umur}) {
   return 'Hi nama saya $nama umur $umur';
 }
