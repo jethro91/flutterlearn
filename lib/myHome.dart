@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String _outputValue2 = '';
   // ======================
 
-  var iniStringVar = 'String Pembalap';
+  var iniStringVar = 'String Napa SUdah ganti ulang';
 
   // ======================
   void _setoutputScreen() {
