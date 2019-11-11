@@ -17,7 +17,7 @@ class _MyHomePageState extends State<MyHomePage> {
   String _outputValue2 = '';
   // ======================
 
-  var iniStringVar = 'String juragan';
+  var iniStringVar = 'String Pembalap';
 
   // ======================
   void _setoutputScreen() {
@@ -25,7 +25,7 @@ class _MyHomePageState extends State<MyHomePage> {
       _outputType = iniStringVar.runtimeType.toString();
       _outputValue = iniStringVar.toString();
     });
-    iniStringVar = 'String Dirubah';
+    iniStringVar = 'String Balapan';
     setState(() {
       _outputType2 = iniStringVar.runtimeType.toString();
       _outputValue2 = iniStringVar.toString();
