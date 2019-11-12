@@ -1,14 +1,23 @@
 // Fungsi detail jelas
-void printNamaUmur({String nama, int umur}) {
+void printNamaUmur({
+  String nama,
+  int umur,
+}) {
   print('Hi nama saya $nama umur $umur');
   return;
 }
 
-String namaUmur({String nama, int umur}) {
+String namaUmur({
+  String nama,
+  int umur,
+}) {
   return 'Hi nama saya $nama umur $umur';
 }
 
-String namaUmur2(String nama, int umur) {
+String namaUmur2(
+  String nama,
+  int umur,
+) {
   return 'Hi nama saya $nama umur $umur';
 }
 
@@ -21,7 +30,10 @@ double sepuluhPersen({int angka}) {
 }
 
 // Fungsi dynamic
-dynamic namaUmurDyn({dynamic nama, dynamic umur}) {
+dynamic namaUmurDyn({
+  dynamic nama,
+  dynamic umur,
+}) {
   return 'Hi nama saya $nama umur $umur';
 }
 
@@ -34,7 +46,10 @@ dynamic sepuluhPersenDyn({dynamic angka}) {
 }
 
 // Fungsi dynamic(default)
-void printNamaUmurDefault({nama, umur}) {
+void printNamaUmurDefault({
+  nama,
+  umur,
+}) {
   print('Hi nama saya $nama umur $umur');
   return;
 }

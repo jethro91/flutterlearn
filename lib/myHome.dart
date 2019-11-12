@@ -2,6 +2,14 @@ import 'package:flutter/material.dart';
 
 import './basicConcept/widget.dart';
 
+class OrangStatic {
+  static String nama = 'Angel';
+  static int umur = 20;
+
+  String namaMember = 'jet';
+  int umurMember = 28;
+}
+
 class MyHomePage extends StatefulWidget {
   MyHomePage({Key key, this.title}) : super(key: key);
   final String title;
@@ -16,36 +24,26 @@ class _MyHomePageState extends State<MyHomePage> {
   String _outputType2 = '';
   String _outputValue2 = '';
   // ======================
+  String iniStringVar = 'String juragan';
 
-  String nama = 'Erihc';
-  int umur = 26;
-
-  // printNamaUmur(inputNama, inputUmur) =>
-  //     print('nama saya $inputNama umur $inputUmur');
-
-  String printNamaUmur(String inputNama, int inputUmur) {
-    return 'nama saya $inputNama umur $inputUmur';
-  }
-
-  String cekUsia(String inputNama, int inputUmur) {
-    if (inputUmur < 17) {
-      return "Belum Dewasa";
-    }
-    return "Sudah Dewasa";
-  }
+  Map<String, int> mapObj = {
+    'satu': 1,
+    'dua': 2,
+    'tiga': 3,
+  };
 
   // ======================
   void _setoutputScreen() {
-    nama = 'Erihc';
-    umur = 15;
+    var orang = OrangStatic();
     setState(() {
-      _outputType = nama.runtimeType.toString();
-      _outputValue = nama.toString();
+      _outputType = orang.namaMember.runtimeType.toString();
+      _outputValue = orang.namaMember.toString();
     });
-    nama = cekUsia(nama, umur);
+    OrangStatic.nama = 'ganti nama';
+    orang.namaMember = 'TEST2';
     setState(() {
-      _outputType2 = nama.runtimeType.toString();
-      _outputValue2 = nama.toString();
+      _outputType2 = OrangStatic.nama.runtimeType.toString();
+      _outputValue2 = orang.namaMember.toString();
     });
   }
 
