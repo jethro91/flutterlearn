@@ -37,6 +37,7 @@ void gakGuna2() {
     umur: 28,
   );
   // isi output = Hi nama saya Jethro umur 28
+}
 
 String namaUmur2(
   String nama,

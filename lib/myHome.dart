@@ -33,15 +33,30 @@ class _MyHomePageState extends State<MyHomePage> {
     return hasil;
   }
 
-  String hasilKeluaran = 'Eric';
+//  Void gakGuna2() {
+  // VOID gak guna CUMA CONTOH
+  // pake
+  // String output = hello(
+  //   nama: 'Eric',
+  //   umur: 27,
+  // );
+  // isi output = Hi nama saya Eric umur 27
+  // output = hello(
+  //   nama: 'Jethro',
+  //   umur: 28,
+  //S);
 
   // ======================
   void _setoutputScreen() {
     setState(() {
-      _outputType = hasilKeluaran;
+      String hasilKeluaran = hello(
+        nama: 'erik',
+        umur: 27,
+      );
+      _outputType = hasilKeluaran.runtimeType.toString();
       _outputValue = hasilKeluaran;
 
-      _outputType2 = hasilKeluaran;
+      _outputType2 = hasilKeluaran.runtimeType.toString();
       _outputValue2 = hasilKeluaran;
     });
   }
@@ -117,4 +132,4 @@ class _MyHomePageState extends State<MyHomePage> {
 // setState(() {
 //   _outputType2 = iniStringFinal.runtimeType.toString();
 //   _outputValue2 = iniStringFinal.toString();
-// });
+// })
