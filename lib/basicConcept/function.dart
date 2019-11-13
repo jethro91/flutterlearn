@@ -1,4 +1,5 @@
 // Fungsi detail jelas
+// dekalarsi
 void printNamaUmur({
   String nama,
   int umur,
@@ -7,12 +8,35 @@ void printNamaUmur({
   return;
 }
 
+void gakGuna() {
+  // VOID gak guna CUMA CONTOH
+  // pake
+  printNamaUmur(
+    nama: 'Eric',
+    umur: 27,
+  );
+}
+
 String namaUmur({
   String nama,
   int umur,
 }) {
   return 'Hi nama saya $nama umur $umur';
 }
+
+void gakGuna2() {
+  // VOID gak guna CUMA CONTOH
+  // pake
+  String output = namaUmur(
+    nama: 'Eric',
+    umur: 27,
+  );
+  // isi output = Hi nama saya Eric umur 27
+  output = namaUmur(
+    nama: 'Jethro',
+    umur: 28,
+  );
+  // isi output = Hi nama saya Jethro umur 28
 
 String namaUmur2(
   String nama,

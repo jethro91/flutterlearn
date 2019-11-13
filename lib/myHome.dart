@@ -24,26 +24,25 @@ class _MyHomePageState extends State<MyHomePage> {
   String _outputType2 = '';
   String _outputValue2 = '';
   // ======================
-  String iniStringVar = 'String juragan';
 
-  Map<String, int> mapObj = {
-    'satu': 1,
-    'dua': 2,
-    'tiga': 3,
-  };
+  String hello({
+    String nama,
+    int umur,
+  }) {
+    String hasil = 'Hello nama saya $nama umur $umur';
+    return hasil;
+  }
+
+  String hasilKeluaran = 'Eric';
 
   // ======================
   void _setoutputScreen() {
-    var orang = OrangStatic();
     setState(() {
-      _outputType = orang.namaMember.runtimeType.toString();
-      _outputValue = orang.namaMember.toString();
-    });
-    OrangStatic.nama = 'ganti nama';
-    orang.namaMember = 'TEST2';
-    setState(() {
-      _outputType2 = OrangStatic.nama.runtimeType.toString();
-      _outputValue2 = orang.namaMember.toString();
+      _outputType = hasilKeluaran;
+      _outputValue = hasilKeluaran;
+
+      _outputType2 = hasilKeluaran;
+      _outputValue2 = hasilKeluaran;
     });
   }
 
@@ -51,6 +50,7 @@ class _MyHomePageState extends State<MyHomePage> {
     setState(() {
       _outputType = '';
       _outputValue = '';
+
       _outputType2 = '';
       _outputValue2 = '';
     });
