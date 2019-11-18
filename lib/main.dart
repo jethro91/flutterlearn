@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import './myHome.dart';
-// import './Row.dart';
-import './Colum.dart';
+import './layout/DenganNavigasi.dart';
+import './layout/TanpaNavigasi.dart';
+import 'package:flutterlearn/Colum.dart';
+import './Row.dart';
 
+// import './myHome.dart';
+// import './Row.dart';
+// import './Colum.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -13,7 +17,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: ColumnContainer(),
+      home: TanpaNavigasi(
+        isiLayout: RowContainer(),
+      ),
     );
   }
 }
