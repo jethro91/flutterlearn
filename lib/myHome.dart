@@ -47,12 +47,20 @@ class _MyHomePageState extends State<MyHomePage> {
   //S);
 
   // ======================
+  String hasilKeluaran = '';
+  String inputnama = '';
+  String inputUmur;
+  void _gantiData() {
+    setState(() {
+      hasilKeluaran = hello(
+        nama: inputnama,
+        umur: int.parse(inputUmur),
+      );
+    });
+  }
+
   void _setoutputScreen() {
     setState(() {
-      String hasilKeluaran = hello(
-        nama: 'erik',
-        umur: 27,
-      );
       _outputType = hasilKeluaran.runtimeType.toString();
       _outputValue = hasilKeluaran;
 
@@ -82,6 +90,28 @@ class _MyHomePageState extends State<MyHomePage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
+              TextFormField(
+                initialValue: inputnama,
+                onChanged: (value) {
+                  inputnama = value;
+                },
+                decoration: InputDecoration(
+                  labelText: 'Input Nama',
+                ),
+              ),
+              TextFormField(
+                initialValue: inputUmur,
+                onChanged: (nilai) {
+                  inputUmur = nilai;
+                },
+                decoration: InputDecoration(
+                  labelText: 'Input Umur',
+                ),
+              ),
+              RaisedButton(
+                onPressed: _gantiData,
+                child: const Text('Ganti Data', style: TextStyle(fontSize: 20)),
+              ),
               RaisedButton(
                 onPressed: _clearOutput,
                 child: const Text('Clear', style: TextStyle(fontSize: 20)),

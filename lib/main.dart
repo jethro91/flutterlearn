@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import './myHome.dart';
+// import './Row.dart';
+import './Colum.dart';
 
 void main() => runApp(MyApp());
 
@@ -11,7 +13,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: ColumnContainer(),
     );
   }
 }
